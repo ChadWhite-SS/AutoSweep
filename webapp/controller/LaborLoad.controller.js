@@ -1,9 +1,25 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
+    "sap/m/Token",
     "ns/automatedsweepv4/automatedsweepv4/model/DateUtils"
-], function (Controller, JSONModel, DateUtils) {
+], function (Controller, JSONModel, Token, DateUtils) {
     "use strict";
+
+    function setCostElementTokens(oMultiInput, sCsv) {
+        sCsv.split(",").forEach(function (sValue) {
+            var sTokenText = sValue.trim();
+            if (sTokenText) {
+                oMultiInput.addToken(new Token({ text: sTokenText }));
+            }
+        });
+    }
+
+    function getCostElementCsv(oMultiInput) {
+        return oMultiInput.getTokens().map(function (oToken) {
+            return oToken.getText().trim();
+        }).filter(Boolean).join(",");
+    }
 
     return Controller.extend("ns.automatedsweepv4.automatedsweepv4.controller.LaborLoad", {
 
@@ -14,7 +30,7 @@ sap.ui.define([
 
             this.byId("WBSElmntF").setValue("1-0001");
             this.byId("WBSElmntT").setValue("4-ZZZZ");
-            this.byId("CostElement").setValue("94100000,94100001,94100002,94200001");
+            setCostElementTokens(this.byId("CostElement"), "94100000,94100001,94100002,94200001");
         },
 
         onBack: function () {
@@ -22,7 +38,7 @@ sap.ui.define([
         },
 
         onLaborLoadReview: function () {
-            var sAccount = this.byId("CostElement").getValue();
+            var sAccount = getCostElementCsv(this.byId("CostElement"));
             var sPostingStartDate = this.byId("PostingStartDate").getValue();
             var sPostingEndDate = this.byId("PostingEndDate").getValue();
             var sPostingActDate = this.byId("PostingActDate").getValue();

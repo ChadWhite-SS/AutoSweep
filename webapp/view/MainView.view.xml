@@ -2,12 +2,29 @@
     controllerName="ns.automatedsweepv4.automatedsweepv4.controller.MainView"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
     xmlns="sap.m">
     <Page
         id="IDPage"
         title="{i18n>title}"
         class="mainDashboardPage"
         enableScrolling="true">
+        <customHeader>
+            <Bar id="dashboardHeader" class="dashboardHeader">
+                <contentLeft>
+                    <core:Icon
+                        id="dashboardHeaderIcon"
+                        src="sap-icon://clean-up"
+                        decorative="false"
+                        tooltip="{i18n>dashboardIconTooltip}"
+                        class="dashboardHeaderIcon" />
+                    <Title
+                        id="dashboardHeaderTitle"
+                        text="{i18n>title}"
+                        level="H1" />
+                </contentLeft>
+            </Bar>
+        </customHeader>
         <content>
             <VBox id="IDMain" width="100%" class="mainDashboard sapUiResponsiveContentPadding">
                 <Title id="dashboardHeading" text="{i18n>dashboardHeading}" level="H1" class="dashboardHeading" />
@@ -15,7 +32,7 @@
 
                 <IconTabBar id="reclassificationTabs" expandable="false" selectedKey="operational" class="reclassificationTabs">
                     <items>
-                        <IconTabFilter id="operationalTab" key="operational" text="{i18n>operationalSectionTitle}" icon="sap-icon://process">
+                        <IconTabFilter id="operationalTab" key="operational" text="{i18n>operationalTabLabel}" tooltip="{i18n>operationalTabTooltip}" icon="sap-icon://process">
                             <content>
                                 <FlexBox id="operationalActionGrid" wrap="Wrap" justifyContent="Start" alignItems="Stretch" class="actionGrid">
                             <VBox id="laborLoadCard" class="actionCard">
@@ -41,7 +58,7 @@
                         </FlexBox>
                             </content>
                         </IconTabFilter>
-                        <IconTabFilter id="balanceSweepTab" key="balanceSweep" text="{i18n>balanceSweepSectionTitle}" icon="sap-icon://money-bills">
+                        <IconTabFilter id="balanceSweepTab" key="balanceSweep" text="{i18n>balanceSweepTabLabel}" tooltip="{i18n>balanceSweepTabTooltip}" icon="sap-icon://money-bills">
                             <content>
                                 <FlexBox id="balanceSweepActionGrid" wrap="Wrap" justifyContent="Start" alignItems="Stretch" class="actionGrid">
                             <VBox id="casToAucCard" class="actionCard">

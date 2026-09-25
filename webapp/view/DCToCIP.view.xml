@@ -70,10 +70,12 @@
                         wrapping="false"
                         labelFor="ElementStart"
                     />
-                    <m:Input
+                    <m:MultiInput
                         id="CostElement2"
                         required="true"
-                        width="600px"
+                        width="100%"
+                        placeholder="Enter cost elements"
+                        showValueHelp="false"
                     />
                 </m:HBox>
                 <m:HBox

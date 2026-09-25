@@ -47,6 +47,17 @@
     padding-right: 1.5rem !important;
 }
 
+.dashboardHeader .sapMBarLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.dashboardHeaderIcon {
+    font-size: 1.5rem;
+    color: var(--sapContent_IconColor);
+}
+
 .dashboardHeading {
     margin-bottom: 0.5rem;
 }
@@ -58,6 +69,23 @@
 
 .reclassificationTabs {
     width: 100%;
+}
+
+.reclassificationTabs .sapMITBHead {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.reclassificationTabs .sapMITBFilter {
+    min-width: 11rem;
+}
+
+.reclassificationTabs .sapMITBFilterIcon {
+    font-size: 1.5rem;
+}
+
+.reclassificationTabs .sapMITBText {
+    white-space: nowrap;
 }
 
 .reclassificationTabs .sapMITBContent {
