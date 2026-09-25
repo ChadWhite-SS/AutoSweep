@@ -59,6 +59,11 @@
 }
 
 .dashboardHeaderIcon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
     font-size: 1.75rem;
     color: var(--sapBrandColor);
 }

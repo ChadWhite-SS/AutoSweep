@@ -14,7 +14,7 @@
                 <contentLeft>
                     <core:Icon
                         id="dashboardHeaderIcon"
-                        src="sap-icon://clean-up"
+                        src="sap-icon://clear-all"
                         decorative="false"
                         tooltip="{i18n>dashboardIconTooltip}"
                         class="dashboardHeaderIcon" />
