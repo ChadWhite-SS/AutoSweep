@@ -13,9 +13,11 @@
                 <Title id="dashboardHeading" text="{i18n>dashboardHeading}" level="H1" class="dashboardHeading" />
                 <Text id="dashboardDescription" text="{i18n>dashboardDescription}" wrapping="true" class="dashboardDescription" />
 
-                <Panel id="operationalSection" headerText="{i18n>operationalSectionTitle}" class="dashboardSection">
-                    <content>
-                        <FlexBox id="operationalActionGrid" wrap="Wrap" justifyContent="Start" alignItems="Stretch" class="actionGrid">
+                <IconTabBar id="reclassificationTabs" expandable="false" selectedKey="operational" class="reclassificationTabs">
+                    <items>
+                        <IconTabFilter id="operationalTab" key="operational" text="{i18n>operationalSectionTitle}" icon="sap-icon://process">
+                            <content>
+                                <FlexBox id="operationalActionGrid" wrap="Wrap" justifyContent="Start" alignItems="Stretch" class="actionGrid">
                             <VBox id="laborLoadCard" class="actionCard">
                                 <Button id="ID1" width="100%" text="{i18n>laborLoadTitle}" icon="sap-icon://employee" type="Emphasized" press=".onLaborLoad" class="largeActionButton" />
                                 <Text id="laborLoadDescription" text="{i18n>laborLoadDescription}" wrapping="true" class="actionDescription" />
@@ -37,35 +39,32 @@
                                 <Text id="opexGaReclassDescription" text="{i18n>opexGaReclassDescription}" wrapping="true" class="actionDescription" />
                             </VBox>
                         </FlexBox>
-                    </content>
-                </Panel>
-
-                <Panel id="balanceSweepSection" headerText="{i18n>balanceSweepSectionTitle}" class="dashboardSection">
-                    <content>
-                        <FlexBox id="balanceSweepActionGrid" wrap="Wrap" justifyContent="Start" alignItems="Stretch" class="actionGrid">
+                            </content>
+                        </IconTabFilter>
+                        <IconTabFilter id="balanceSweepTab" key="balanceSweep" text="{i18n>balanceSweepSectionTitle}" icon="sap-icon://money-bills">
+                            <content>
+                                <FlexBox id="balanceSweepActionGrid" wrap="Wrap" justifyContent="Start" alignItems="Stretch" class="actionGrid">
                             <VBox id="casToAucCard" class="actionCard">
                                 <Button id="ID5" width="100%" text="{i18n>casToAucTitle}" icon="sap-icon://process" type="Default" press=".onCasToAuc" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
                                 <Text id="casToAucDescription" text="{i18n>casToAucDescription}" wrapping="true" class="actionDescription" />
-                                <ObjectStatus id="casToAucStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" tooltip="{i18n>backendConfigurationSteps}" class="actionStatus" />
                             </VBox>
                             <VBox id="casToExpenseCard" class="actionCard">
                                 <Button id="ID6" width="100%" text="{i18n>casToExpenseTitle}" icon="sap-icon://money-bills" type="Default" press=".onCasToExpense" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
                                 <Text id="casToExpenseDescription" text="{i18n>casToExpenseDescription}" wrapping="true" class="actionDescription" />
-                                <ObjectStatus id="casToExpenseStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" tooltip="{i18n>backendConfigurationSteps}" class="actionStatus" />
                             </VBox>
                             <VBox id="employeeContributionCard" class="actionCard">
                                 <Button id="ID10" width="100%" text="{i18n>employeeContributionTitle}" icon="sap-icon://employee" type="Default" press=".onEmployeeContribution" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
                                 <Text id="employeeContributionDescription" text="{i18n>employeeContributionDescription}" wrapping="true" class="actionDescription" />
-                                <ObjectStatus id="employeeContributionStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" tooltip="{i18n>backendConfigurationSteps}" class="actionStatus" />
                             </VBox>
                             <VBox id="interestToInvestmentCard" class="actionCard">
                                 <Button id="ID7" width="100%" text="{i18n>interestToInvestmentTitle}" icon="sap-icon://money-bills" type="Default" press=".onInterestToInvestment" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
                                 <Text id="interestToInvestmentDescription" text="{i18n>interestToInvestmentDescription}" wrapping="true" class="actionDescription" />
-                                <ObjectStatus id="interestToInvestmentStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" tooltip="{i18n>backendConfigurationSteps}" class="actionStatus" />
                             </VBox>
                         </FlexBox>
-                    </content>
-                </Panel>
+                            </content>
+                        </IconTabFilter>
+                    </items>
+                </IconTabBar>
             </VBox>
         </content>
     </Page>

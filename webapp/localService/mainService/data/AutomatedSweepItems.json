@@ -1,0 +1,29 @@
+[
+  {
+    "CompCode": "1000",
+    "Ledger": "0L",
+    "WBSElement": "00000001",
+    "PostDate": "2025-01-15",
+    "Account": "400000",
+    "ActivityType": "LABOR",
+    "WBSElmnt": "DEMO-WBS-001",
+    "Item": "000001",
+    "AmntTC": 1250.00,
+    "CurrTC": "USD",
+    "Quantity": 1.000,
+    "Unit": "EA",
+    "BusTransType": "RFBU",
+    "AccDocument": "1800000001",
+    "CostCtr": "100000",
+    "DocDate": "2025-01-15",
+    "DocType": "SA",
+    "ItemText": "Mock automated sweep item",
+    "DCIndicator": "S",
+    "ProjectType": "01",
+    "__OperationControl": {
+      "LaborLoad": true,
+      "NonLaborLoad": true
+    },
+    "SAP__Messages": []
+  }
+]
