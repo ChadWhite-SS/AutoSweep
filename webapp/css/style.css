@@ -17,10 +17,10 @@
 }
 
 .largeActionButton .sapMBtnInner {
-    min-height: 4.25rem !important;
-    height: auto !important;
+    min-height: 4rem !important;
+    height: 4rem !important;
     border-radius: 0.625rem !important;
-    padding: 0.75rem 1rem !important;
+    padding: 0.5rem 1rem !important;
 }
 
 .largeActionButton .sapMBtnContent {
@@ -67,27 +67,27 @@
 
 .actionGrid {
     width: 100%;
-    gap: 1.25rem;
+    gap: 0.75rem 1.25rem;
 }
 
 .actionCard {
     box-sizing: border-box;
-    flex: 1 1 calc(50% - 0.625rem);
+    flex: 0 0 calc(50% - 0.625rem);
     min-width: 18rem;
-    padding: 0.75rem;
+    padding: 0.25rem 0.75rem;
 }
 
 .actionDescription {
     display: block;
     color: var(--sapTextColor);
-    line-height: 1.4;
-    margin-top: 0.75rem;
-    min-height: 2.8rem;
+    line-height: 1.3;
+    margin-top: 0.5rem;
+    min-height: 1.3rem;
 }
 
 .actionStatus {
     display: block;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 @media (max-width: 40rem) {
@@ -96,7 +96,7 @@
     }
 
     .actionCard {
-        flex-basis: 100%;
+        flex: 0 0 100%;
         min-width: 0;
     }
 }

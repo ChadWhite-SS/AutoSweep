@@ -46,22 +46,22 @@
                             <VBox id="casToAucCard" class="actionCard">
                                 <Button id="ID5" width="100%" text="{i18n>casToAucTitle}" icon="sap-icon://process" type="Default" press=".onCasToAuc" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
                                 <Text id="casToAucDescription" text="{i18n>casToAucDescription}" wrapping="true" class="actionDescription" />
-                                <ObjectStatus id="casToAucStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" class="actionStatus" />
+                                <ObjectStatus id="casToAucStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" tooltip="{i18n>backendConfigurationSteps}" class="actionStatus" />
                             </VBox>
                             <VBox id="casToExpenseCard" class="actionCard">
                                 <Button id="ID6" width="100%" text="{i18n>casToExpenseTitle}" icon="sap-icon://money-bills" type="Default" press=".onCasToExpense" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
                                 <Text id="casToExpenseDescription" text="{i18n>casToExpenseDescription}" wrapping="true" class="actionDescription" />
-                                <ObjectStatus id="casToExpenseStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" class="actionStatus" />
+                                <ObjectStatus id="casToExpenseStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" tooltip="{i18n>backendConfigurationSteps}" class="actionStatus" />
                             </VBox>
                             <VBox id="employeeContributionCard" class="actionCard">
                                 <Button id="ID10" width="100%" text="{i18n>employeeContributionTitle}" icon="sap-icon://employee" type="Default" press=".onEmployeeContribution" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
                                 <Text id="employeeContributionDescription" text="{i18n>employeeContributionDescription}" wrapping="true" class="actionDescription" />
-                                <ObjectStatus id="employeeContributionStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" class="actionStatus" />
+                                <ObjectStatus id="employeeContributionStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" tooltip="{i18n>backendConfigurationSteps}" class="actionStatus" />
                             </VBox>
                             <VBox id="interestToInvestmentCard" class="actionCard">
                                 <Button id="ID7" width="100%" text="{i18n>interestToInvestmentTitle}" icon="sap-icon://money-bills" type="Default" press=".onInterestToInvestment" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
                                 <Text id="interestToInvestmentDescription" text="{i18n>interestToInvestmentDescription}" wrapping="true" class="actionDescription" />
-                                <ObjectStatus id="interestToInvestmentStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" class="actionStatus" />
+                                <ObjectStatus id="interestToInvestmentStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" tooltip="{i18n>backendConfigurationSteps}" class="actionStatus" />
                             </VBox>
                         </FlexBox>
                     </content>
