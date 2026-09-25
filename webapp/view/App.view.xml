@@ -1,0 +1,8 @@
+<mvc:View controllerName="ns.automatedsweepv4.automatedsweepv4.controller.App"
+    displayBlock="true"
+    class="sapUINoContentPadding"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m">
+    <App id="app" class="sapUINoContentPadding">
+    </App>
+</mvc:View>

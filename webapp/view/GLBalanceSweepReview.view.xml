@@ -1,0 +1,27 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.GLBalanceSweepReview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="GLBalanceSweepReviewPage" title="Review Balance Sweep" showNavButton="true" navButtonPress=".onBack">
+        <content>
+            <MessageStrip id="GLBalanceSweepConfigMessage" type="Warning" showIcon="true"
+                text="The balance-sweep backend contract and Finance configuration must be active before posting." />
+            <Table id="GLBalanceSweepTable" noDataText="No balance records are available from the active service."
+                growing="true" growingThreshold="50" sticky="ColumnHeaders">
+                <columns>
+                    <Column><Text text="Source Account" /></Column>
+                    <Column><Text text="Source WBS/Project" /></Column>
+                    <Column><Text text="Amount" /></Column>
+                    <Column><Text text="Currency" /></Column>
+                </columns>
+            </Table>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button id="GLBalanceSweepPostButton" text="Post Balance Sweep" type="Emphasized"
+                    press=".onPost" />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,54 @@
+<mvc:View xmlns:tnt="sap.tnt"
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.NonLaborLoadReview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        title="Review Non-Labor Load Records"
+        id="IDNonLaborLoadReview"
+    >
+        <content>
+            <Table id="NonLaborLoadTable" noDataText="No Non-Labor Load Records found!" sticky="ColumnHeaders"
+                growing="true" growingThreshold="50" growingScrollToLoad="true">
+                <columns>
+                    <Column id="idColumn0N">
+                        <Text
+                            text="WBS Element"
+                            id="idText0N"
+                        />
+                    </Column>                
+                    <Column id="idColumn1N">
+                        <Text
+                            text="Cost Element"
+                            id="idText1N"
+                        />
+                    </Column>
+                    <Column id="idColumn3N">
+                        <Text
+                            text="Post Date"
+                            id="idText3N"
+                        />
+                    </Column>
+                    <Column id="idColumn5N">
+                        <Text
+                            text="Amount"
+                            id="idText5N"
+                        />
+                    </Column>
+                </columns>
+            </Table>
+        </content>
+
+        <footer>
+            <Toolbar id="idtoolbarN">
+                <ToolbarSpacer id="idtoolspaceN" />
+                <Button
+                    id="idButtonN"
+                    text="Post Non-Labor Load"
+                    type="Emphasized"
+                    press=".onPostNonLaborLoad" 
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

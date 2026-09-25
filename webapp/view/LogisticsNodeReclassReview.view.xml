@@ -1,0 +1,66 @@
+<mvc:View xmlns:tnt="sap.tnt"
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.LogisticsNodeReclassReview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        title="Review Logistics Node Reclass Records"
+        id="IDLogisticsNodeReclassReview"
+    >
+        <content>
+            <Table id="LogisticsNodeReclassTable" noDataText="No Logistics Node Reclass Records found!" sticky="ColumnHeaders"
+                growing="true" growingThreshold="50" growingScrollToLoad="true">
+                <columns>
+                    <Column id="idLogColumn0">
+                        <Text
+                            text="WBS Element"
+                            id="idLogText0"
+                        />
+                    </Column>
+                    <Column id="idLogColumn1">
+                        <Text
+                            text="Cost Center"
+                            id="idLogText1"
+                        />
+                    </Column>
+                    <Column id="idLogColumn2">
+                        <Text
+                            text="Activity Type"
+                            id="idLogText2"
+                        />
+                    </Column>
+                    <Column id="idLogColumn3">
+                        <Text
+                            text="Post Date"
+                            id="idLogText3"
+                        />
+                    </Column>
+                    <Column id="idLogColumn4">
+                        <Text
+                            text="Quantity"
+                            id="idLogText4"
+                        />
+                    </Column>
+                    <Column id="idLogColumn5">
+                        <Text
+                            text="Amount"
+                            id="idLogText5"
+                        />
+                    </Column>
+                </columns>
+            </Table>
+        </content>
+
+        <footer>
+            <Toolbar id="idLogToolbar">
+                <ToolbarSpacer id="idLogToolSpace" />
+                <Button
+                    id="idLogButton"
+                    text="Post Logistics Node Reclass"
+                    type="Emphasized"
+                    press=".onLogisticsNodeReclassLoad"
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

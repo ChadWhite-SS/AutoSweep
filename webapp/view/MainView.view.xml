@@ -1,0 +1,102 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.MainView"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" 
+>
+    <Page
+        title="Automated Sweep Dashboard"
+        class="sapUINoMargin sapUINoContentPadding"
+        enableScrolling="false"
+        id="IDPage"
+    >
+        <content>
+            <VBox
+                class="sapUINoMargin sapUINoContentPadding"
+                id="IDMain"
+                width="100%"
+                height="100%"
+                fitContainer="true"
+                justifyContent="Center"
+                alignItems="Center"
+            >
+                <Button
+                    id="ID1"
+                    width="400px"
+                    text="Labor Load"
+                    type="Emphasized"
+                    press=".onLaborLoad"
+                    class="largeActionButton" 
+                />
+                <Button
+                    id="ID2"
+                    width="400px"
+                    text="Non-Labor Load"
+                    type="Emphasized"
+                    press=".onNonLaborLoad" 
+                    class="largeActionButton"                                
+                />
+                <Button
+                    id="ID4"
+                    width="400px"
+                    text="DC-to-CIP Reclass"
+                    type="Emphasized"
+                    press=".onDCToCIP"
+                    class="largeActionButton"
+                />
+                <Button
+                    id="ID8"
+                    width="400px"
+                    text="Logistics Node Reclass"
+                    type="Emphasized"
+                    press=".onLogisticsNodeReclass"
+                    class="largeActionButton"
+                />
+                <Button
+                    id="ID9"
+                    width="400px"
+                    text="OPEX G&amp;A Reclass"
+                    type="Emphasized"
+                    press=".onOpexGAReclass"
+                    class="largeActionButton"
+                />
+                <Button
+                    id="ID5"
+                    width="400px"
+                    text="CAS-to-AuC Reclass"
+                    type="Emphasized"
+                    press=".onCasToAuc"
+                    tooltip="Requires active balance-sweep backend contract and Finance configuration"
+                    class="largeActionButton"
+                />
+                <Button
+                    id="ID6"
+                    width="400px"
+                    text="CAS-to-expense Reclass"
+                    type="Emphasized"
+                    press=".onCasToExpense"
+                    tooltip="Requires active balance-sweep backend contract and Finance configuration"
+                    class="largeActionButton"
+                />
+                <Button
+                    id="ID10"
+                    width="400px"
+                    text="Employee Contribution Reclass"
+                    type="Emphasized"
+                    press=".onEmployeeContribution"
+                    tooltip="Requires active balance-sweep backend contract and Finance configuration"
+                    class="largeActionButton"
+                />
+                <Button
+                    id="ID7"
+                    width="400px"
+                    text="Interest-to-Investment Reclass"
+                    type="Emphasized"
+                    press=".onInterestToInvestment"
+                    tooltip="Requires active balance-sweep backend contract and Finance configuration"
+                    class="largeActionButton"
+                />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

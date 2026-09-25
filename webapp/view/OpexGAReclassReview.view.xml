@@ -1,0 +1,54 @@
+<mvc:View xmlns:tnt="sap.tnt"
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.OpexGAReclassReview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        title="Review OPEX G&amp;A Reclass Records"
+        id="IDOpexGAReclassReview"
+    >
+        <content>
+            <Table id="OpexGAReclassTable" noDataText="No OPEX G&amp;A Reclass Records found!" sticky="ColumnHeaders"
+                growing="true" growingThreshold="50" growingScrollToLoad="true">
+                <columns>
+                    <Column id="idOpexColumn0">
+                        <Text
+                            text="WBS Element"
+                            id="idOpexText0"
+                        />
+                    </Column>
+                    <Column id="idOpexColumn1">
+                        <Text
+                            text="Cost Element"
+                            id="idOpexText1"
+                        />
+                    </Column>
+                    <Column id="idOpexColumn2">
+                        <Text
+                            text="Post Date"
+                            id="idOpexText2"
+                        />
+                    </Column>
+                    <Column id="idOpexColumn3">
+                        <Text
+                            text="Amount"
+                            id="idOpexText3"
+                        />
+                    </Column>
+                </columns>
+            </Table>
+        </content>
+
+        <footer>
+            <Toolbar id="idOpexToolbar">
+                <ToolbarSpacer id="idOpexToolSpace" />
+                <Button
+                    id="idOpexButton"
+                    text="Post OPEX G&amp;A Reclass"
+                    type="Emphasized"
+                    press=".onOpexGAReclassLoad"
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

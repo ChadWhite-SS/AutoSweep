@@ -1,0 +1,171 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.DCToCIP"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+>
+    <m:Page
+        title="DC-To-CIP Reclass"
+        showNavButton="true"
+        navButtonPress=".onBack"
+        id="IDDCToCIP"
+    >
+        <m:content>
+            <m:VBox
+                class="sapUiTinyMargin"
+                width="30rem"
+                id="IDBox1"
+                alignContent="Center"
+            >
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox10"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Source Project"
+                        id="SourceProject"
+                        width="340px"
+                        wrapping="false"
+                        labelFor="SourceProject"
+                    />
+                    <m:Input
+                        id="SourceProject2"
+                        width="600px"
+                        required="true"
+                    />
+                </m:HBox>
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox11"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Target Project"
+                        id="TargetProject"
+                        width="340px"
+                        wrapping="false"
+                        labelFor="TargetProject"
+                    />
+                    <m:Input
+                        id="TargetProject2"
+                        width="600px"
+                        required="true"
+                    />
+                </m:HBox>                
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox12"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Cost Element"
+                        id="Element11"
+                        width="200px"
+                        wrapping="false"
+                        labelFor="ElementStart"
+                    />
+                    <m:Input
+                        id="CostElement2"
+                        required="true"
+                        width="600px"
+                    />
+                </m:HBox>
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox20"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date From"
+                        width="120px"
+                        wrapping="false"
+                        id="iddate10"
+                        labelFor="PostingStartDate"
+                    />
+
+                    <m:DatePicker
+                        id="PostingStartDate1"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+
+                    <m:Label
+                        text="To"
+                        width="40px"
+                        id="iddate28"
+                        class="sapUiSmallMarginBegin"
+                        labelFor="PostingEndDate"
+                    />
+
+                    <m:DatePicker
+                        id="PostingEndDate1"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                    />
+                </m:HBox>
+
+                  <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox13N"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date to be used for Load"
+                        width="220px"
+                        wrapping="false"
+                        id="iddate14N"
+                        labelFor="PostingActDateN"
+                    />
+
+                    <m:DatePicker
+                        id="PostingActDate1"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+                </m:HBox>
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox40"
+                    justifyContent="Start"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Test Run"
+                        visible="false"
+                        id="IDRun1"
+                    />
+                    <m:CheckBox
+                        id="testRun1"
+                        visible="false"
+                        selected="true"
+                    />
+                </m:HBox>
+
+                <m:Button
+                    text="Review DC-To-CIP Reclass"
+                    type="Emphasized"
+                    press=".onDCToCIPReview"
+                    id="IDbtn10"
+                    class="sapUiMediumMarginTop"
+                />
+            </m:VBox>
+        </m:content>
+    </m:Page>
+</mvc:View>

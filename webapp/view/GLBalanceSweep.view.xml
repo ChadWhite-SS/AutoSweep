@@ -1,0 +1,26 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.GLBalanceSweep"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m">
+    <m:Page id="GLBalanceSweepPage" title="Balance Sweep" showNavButton="true" navButtonPress=".onBack">
+        <m:content>
+            <m:VBox class="sapUiTinyMargin" width="30rem">
+                <m:Label text="Posting Date From" labelFor="PostingStartDateB" />
+                <m:DatePicker id="PostingStartDateB" valueFormat="yyyy-MM-dd" displayFormat="medium" required="true" />
+                <m:Label text="Posting Date To" labelFor="PostingEndDateB" class="sapUiTinyMarginTop" />
+                <m:DatePicker id="PostingEndDateB" valueFormat="yyyy-MM-dd" displayFormat="medium" />
+                <m:Label text="Posting Date" labelFor="PostingActDateB" class="sapUiTinyMarginTop" />
+                <m:DatePicker id="PostingActDateB" valueFormat="yyyy-MM-dd" displayFormat="medium" required="true" />
+                <m:Label text="Company Code" labelFor="CompanyCodeB" class="sapUiTinyMarginTop" />
+                <m:Input id="CompanyCodeB" value="1000" maxLength="4" />
+                <m:Label text="Ledger" labelFor="LedgerB" class="sapUiTinyMarginTop" />
+                <m:Input id="LedgerB" value="0L" maxLength="2" />
+                <m:Label text="Currency" labelFor="CurrencyB" class="sapUiTinyMarginTop" />
+                <m:Input id="CurrencyB" value="USD" maxLength="5" />
+                <m:CheckBox id="TestRunB" text="Test Run" selected="true" class="sapUiSmallMarginTop" />
+                <m:Text id="GLBalanceSweepStatus" class="sapUiSmallMarginTop" />
+                <m:Button text="Review" type="Emphasized" press=".onReview" class="sapUiMediumMarginTop" />
+            </m:VBox>
+        </m:content>
+    </m:Page>
+</mvc:View>

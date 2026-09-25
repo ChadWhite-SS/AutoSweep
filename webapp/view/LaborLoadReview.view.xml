@@ -1,0 +1,66 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.LaborLoadReview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        title="Review Labor Load Records"
+        id="idPage"
+    >
+        <content>
+            <Table id="LaborLoadTable" noDataText="No Labor Load Records found!" sticky="ColumnHeaders"
+                growing="true" growingThreshold="50" growingScrollToLoad="true">
+                <columns>
+                    <Column id="idColumn0">
+                        <Text
+                            text="WBS Element"
+                            id="idText0"
+                        />
+                    </Column>                
+                    <Column id="idColumn1">
+                        <Text
+                            text="Cost Center"
+                            id="idText1"
+                        />
+                    </Column>
+                    <Column id="idColumn2">
+                        <Text
+                            text="Activity Type"
+                            id="idText2"
+                        />
+                    </Column>
+                    <Column id="idColumn3">
+                        <Text
+                            text="Post Date"
+                            id="idText3"
+                        />
+                    </Column>
+                    <Column id="idColumn4">
+                        <Text
+                            text="Quantity"
+                            id="idText4"
+                        />
+                    </Column>
+                    <Column id="idColumn5">
+                        <Text
+                            text="Amount"
+                            id="idText5"
+                        />
+                    </Column>
+                </columns>
+            </Table>
+        </content>
+
+        <footer>
+            <Toolbar id="idtoolbar">
+                <ToolbarSpacer id="idtoolspace" />
+                <Button
+                    id="idButton"
+                    text="Post Labor Load"
+                    type="Emphasized"
+                    press=".onPostLaborLoad"
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

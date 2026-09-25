@@ -1,0 +1,16 @@
+node_modules/
+dist/
+test-results/
+coverage/
+.env
+.env.*
+!.env.example
+abap/
+Z_AS/
+ui5-deploy.yaml
+.mcp.json
+.claude/
+*.zip
+*.log
+.DS_Store
+.vscode/

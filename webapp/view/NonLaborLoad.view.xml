@@ -1,0 +1,207 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.NonLaborLoad"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+>
+    <m:Page
+        title="Non-Labor Load"
+        showNavButton="true"
+        navButtonPress=".onBack"
+        id="IDNonLaborLoad"
+    >
+        <m:content>
+            <m:VBox
+                class="sapUiTinyMargin"
+                width="30rem"
+                id="IDBoxN"
+                alignContent="Center"
+            >
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox1N"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Project From"
+                        id="AccountN"
+                        width="340px"
+                        wrapping="false"
+                        labelFor="WBSElementStart"
+                    />
+                    <m:Input
+                        id="WBSElmntFN"
+                        width="600px"
+                        required="true"
+                    />
+
+                    <m:Label
+                        text="To"
+                        id="Account2N"
+                        width="60px"
+                        labelFor="WBSElementEnd"
+                        class="sapUiMediumMargin"
+                    />
+                    <m:Input
+                        id="WBSElmntTN"
+                        width="600px"
+                    />
+                </m:HBox>
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox6N"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Cost Element"
+                        id="Element1N"
+                        width="200px"
+                        wrapping="false"
+                        labelFor="ElementStart"
+                    />
+                    <m:Input
+                        id="CostElementN"
+                        required="true"
+                        width="600px"                
+                    />
+                </m:HBox>
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox2N"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date From"
+                        width="120px"
+                        wrapping="false"
+                        id="iddate1N"
+                        labelFor="PostingStartDate"
+                    />
+
+                    <m:DatePicker
+                        id="PostingStartDateN"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+
+                    <m:Label
+                        text="To"
+                        width="40px"
+                        id="iddate2N"
+                        class="sapUiSmallMarginBegin"
+                        labelFor="PostingEndDate"
+                    />
+
+                    <m:DatePicker
+                        id="PostingEndDateN"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox3N"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Project Type"
+                        width="120px"
+                        id="idprojectN"
+                        labelFor="ProjectType"
+                    />
+
+                    <m:Input
+                        id="ProjectTypeN"
+                        width="40px"
+                        value="Y7"
+                        required="true"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox11N"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date to be used for Load"
+                        width="220px"
+                        wrapping="false"
+                        id="iddate12N"
+                        labelFor="PostingActDateN"
+                    />
+
+                    <m:DatePicker
+                        id="PostingActDateN"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox30N"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="WBS Element for Offset Posting"
+                        width="220px"
+                        id="idoffset1"
+                        labelFor="WBSOffset"
+                    />
+
+                    <m:Input
+                        id="WBSOffset"
+                        width="600px"
+                        required="true"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox4N"
+                    justifyContent="Start"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Test Run"
+                        visible="false"         
+                        id="IDRunN"
+                    />
+                    <m:CheckBox
+                        id="testRunN"
+                        visible="false"
+                        selected="true"
+                    />
+                </m:HBox>
+
+                <m:Button
+                    text="Review Post Non-Labor"
+                    type="Emphasized"
+                    press=".onNonLaborLoadReview"
+                    id="IDbtn1N"
+                    class="sapUiMediumMarginTop"
+                />
+            </m:VBox>
+        </m:content>
+    </m:Page>
+</mvc:View>

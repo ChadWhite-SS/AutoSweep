@@ -1,0 +1,110 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.OpexGAReclass"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+>
+    <m:Page
+        title="OPEX G&amp;A Reclass"
+        showNavButton="true"
+        navButtonPress=".onBack"
+        id="IDOpexGAReclass"
+    >
+        <m:content>
+            <m:VBox
+                class="sapUiTinyMargin"
+                width="30rem"
+                id="IDOpexBox1"
+                alignContent="Center"
+            >
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idopexhbox20"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date From"
+                        width="120px"
+                        wrapping="false"
+                        id="idopexdate10"
+                        labelFor="PostingStartDateO"
+                    />
+
+                    <m:DatePicker
+                        id="PostingStartDateO"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+
+                    <m:Label
+                        text="To"
+                        width="40px"
+                        id="idopexdate28"
+                        class="sapUiSmallMarginBegin"
+                        labelFor="PostingEndDateO"
+                    />
+
+                    <m:DatePicker
+                        id="PostingEndDateO"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idopexhbox14"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date to be used for Load"
+                        width="220px"
+                        wrapping="false"
+                        id="idopexdate14"
+                        labelFor="PostingActDateO"
+                    />
+
+                    <m:DatePicker
+                        id="PostingActDateO"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idopexhbox40"
+                    justifyContent="Start"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Test Run"
+                        id="IDOpexRunLabel"
+                    />
+                    <m:CheckBox
+                        id="testRunO"
+                        selected="true"
+                    />
+                </m:HBox>
+
+                <m:Button
+                    text="Review OPEX G&amp;A Reclass"
+                    type="Emphasized"
+                    press=".onOpexGAReclassReview"
+                    id="IDopexbtn10"
+                    class="sapUiMediumMarginTop"
+                />
+            </m:VBox>
+        </m:content>
+    </m:Page>
+</mvc:View>

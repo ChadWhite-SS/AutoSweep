@@ -1,0 +1,233 @@
+{
+  "_version": "1.83.0",
+  "sap.app": {
+    "id": "ns.automatedsweepv4.automatedsweepv4",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.22.0",
+      "toolsId": "bc13b2c8-cb8e-4317-a885-d0e1451b24f0"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata4/sap/zui_automatedsweep_v04/srvd/sap/zui_automatedsweep_v2/0001/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "4.01"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.148.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {} 
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ns.automatedsweepv4.automatedsweepv4.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    }, 
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "ns.automatedsweepv4.automatedsweepv4.view",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "RouteMainView",
+          "pattern": "",
+          "target": "TargetMainView"
+        },
+        {
+          "name": "LaborLoad",
+          "pattern": "laborLoad",
+          "target": "TargetLaborLoad"
+        },
+        {
+          "name": "NonLaborLoad",
+          "pattern": "nonlaborLoad",
+          "target": "TargetNonLaborLoad"
+        },        
+        {
+          "name": "LaborLoadReview",
+          "pattern": "LaborLoadReview/{Account}/{PostingStartDate}/{PostingEndDate}/{WBSElmntF}/{WBSElmntT}/{ProjectType}",
+          "target": "TargetLaborLoadReview"
+        },
+        {
+          "name": "NonLaborLoadReview",
+          "pattern": "NonLaborLoadReview/{Account}/{PostingStartDate}/{PostingEndDate}/{PostingActDate}/{WBSOffset}/{WBSElmntF}/{WBSElmntT}/{ProjectType}",
+          "target": "TargetNonLaborLoadReview"
+        },
+        {
+          "name": "DCToCIPReview",
+          "pattern": "DCToCIPReview/{Account}/{PostingStartDate}/{PostingEndDate}/{PostingActDate}/{WBSElmntF}/{WBSElmntT}",
+          "target": "TargetDCToCIPReview"
+        },        
+        {
+          "name": "DCToCIP",
+          "pattern": "DCToCIP",
+          "target": "TargetDCToCIP"
+        },
+        {
+          "name": "LogisticsNodeReclass",
+          "pattern": "logisticsNodeReclass",
+          "target": "TargetLogisticsNodeReclass"
+        },
+        {
+          "name": "LogisticsNodeReclassReview",
+          "pattern": "LogisticsNodeReclassReview/{PostingStartDate}/{PostingEndDate}/{PostingActDate}",
+          "target": "TargetLogisticsNodeReclassReview"
+        },
+        {
+          "name": "OpexGAReclass",
+          "pattern": "opexGAReclass",
+          "target": "TargetOpexGAReclass"
+        },
+        {
+          "name": "OpexGAReclassReview",
+          "pattern": "OpexGAReclassReview/{PostingStartDate}/{PostingEndDate}/{PostingActDate}",
+          "target": "TargetOpexGAReclassReview"
+        },
+        {
+          "name": "GLBalanceSweep",
+          "pattern": "glBalanceSweep/{Scenario}",
+          "target": "TargetGLBalanceSweep"
+        },
+        {
+          "name": "GLBalanceSweepReview",
+          "pattern": "glBalanceSweepReview/{Scenario}/{PostingDateStart}/{PostingDateEnd}/{PostingActualDate}",
+          "target": "TargetGLBalanceSweepReview"
+        }
+      ],
+      "targets": {
+        "TargetMainView": {
+          "id": "MainView",
+          "name": "MainView"
+        },
+        "TargetLaborLoad": {
+          "viewName": "LaborLoad",
+          "viewId": "IDLaborLoad"
+        },  
+        "TargetNonLaborLoad": {
+          "viewName": "NonLaborLoad",
+          "viewId": "IDNonLaborLoad"
+        },          
+        "TargetLaborLoadReview": {
+          "viewName": "LaborLoadReview",
+          "viewId": "IDLaborLoadReview",
+          "viewType": "XML"
+        },
+        "TargetNonLaborLoadReview": {
+        "viewName": "NonLaborLoadReview",
+        "viewId": "IDNonLaborLoadReview",
+        "viewType": "XML"
+        },
+        "TargetDCToCIP": {
+          "viewName": "DCToCIP",
+          "viewId": "IDDCToCIP",
+          "viewType": "XML"
+        },
+       "TargetDCToCIPReview": {
+          "viewName": "DCToCIPReview",
+          "viewId": "IDDCToCIPReview",
+          "viewType": "XML"
+        },
+        "TargetLogisticsNodeReclass": {
+          "viewName": "LogisticsNodeReclass",
+          "viewId": "IDLogisticsNodeReclass",
+          "viewType": "XML"
+        },
+        "TargetLogisticsNodeReclassReview": {
+          "viewName": "LogisticsNodeReclassReview",
+          "viewId": "IDLogisticsNodeReclassReview",
+          "viewType": "XML"
+        },
+        "TargetOpexGAReclass": {
+          "viewName": "OpexGAReclass",
+          "viewId": "IDOpexGAReclass",
+          "viewType": "XML"
+        },
+        "TargetOpexGAReclassReview": {
+          "viewName": "OpexGAReclassReview",
+          "viewId": "IDOpexGAReclassReview",
+          "viewType": "XML"
+        },
+        "TargetGLBalanceSweep": {
+          "viewName": "GLBalanceSweep",
+          "viewId": "GLBalanceSweepPage",
+          "viewType": "XML"
+        },
+        "TargetGLBalanceSweepReview": {
+          "viewName": "GLBalanceSweepReview",
+          "viewId": "GLBalanceSweepReviewPage",
+          "viewType": "XML"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "ns.automatedsweepv4.automatedsweepv4.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

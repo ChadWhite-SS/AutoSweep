@@ -1,0 +1,110 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.LogisticsNodeReclass"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+>
+    <m:Page
+        title="Logistics Node Reclass"
+        showNavButton="true"
+        navButtonPress=".onBack"
+        id="IDLogisticsNodeReclass"
+    >
+        <m:content>
+            <m:VBox
+                class="sapUiTinyMargin"
+                width="30rem"
+                id="IDLogBox1"
+                alignContent="Center"
+            >
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idloghbox20"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date From"
+                        width="120px"
+                        wrapping="false"
+                        id="idlogdate10"
+                        labelFor="PostingStartDateL"
+                    />
+
+                    <m:DatePicker
+                        id="PostingStartDateL"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+
+                    <m:Label
+                        text="To"
+                        width="40px"
+                        id="idlogdate28"
+                        class="sapUiSmallMarginBegin"
+                        labelFor="PostingEndDateL"
+                    />
+
+                    <m:DatePicker
+                        id="PostingEndDateL"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idloghbox14"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date to be used for Load"
+                        width="220px"
+                        wrapping="false"
+                        id="idlogdate14"
+                        labelFor="PostingActDateL"
+                    />
+
+                    <m:DatePicker
+                        id="PostingActDateL"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idloghbox40"
+                    justifyContent="Start"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Test Run"
+                        id="IDLogRunLabel"
+                    />
+                    <m:CheckBox
+                        id="testRunL"
+                        selected="true"
+                    />
+                </m:HBox>
+
+                <m:Button
+                    text="Review Logistics Node Reclass"
+                    type="Emphasized"
+                    press=".onLogisticsNodeReclassReview"
+                    id="IDlogbtn10"
+                    class="sapUiMediumMarginTop"
+                />
+            </m:VBox>
+        </m:content>
+    </m:Page>
+</mvc:View>

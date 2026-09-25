@@ -1,0 +1,184 @@
+<mvc:View
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.LaborLoad"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+>
+    <m:Page
+        title="Labor Load"
+        showNavButton="true"
+        navButtonPress=".onBack"
+        id="IDLaborLoad"
+    >
+        <m:content>
+            <m:VBox
+                class="sapUiTinyMargin"
+                width="30rem"
+                id="IDBox"
+                alignContent="Center"
+            >
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox1"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Project From"
+                        id="Account"
+                        width="340px"
+                        wrapping="false"
+                        labelFor="WBSElementStart"
+                    />
+                    <m:Input
+                        id="WBSElmntF"
+                        width="600px"
+                        required="true"
+                    />
+
+                    <m:Label
+                        text="To"
+                        id="Account2"
+                        width="60px"
+                        labelFor="WBSElementEnd"
+                        class="sapUiMediumMargin"
+                    />
+                    <m:Input
+                        id="WBSElmntT"
+                        width="600px"
+                    />
+                </m:HBox>
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox6"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Cost Element"
+                        id="Element1"
+                        width="200px"
+                        wrapping="false"
+                        labelFor="ElementStart"
+                    />
+                    <m:Input
+                        id="CostElement"
+                        required="true"
+                        width="600px"
+                    />
+                </m:HBox>
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox2"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date From"
+                        width="120px"
+                        wrapping="false"
+                        id="iddate1"
+                        labelFor="PostingStartDate"
+                    />
+
+                    <m:DatePicker
+                        id="PostingStartDate"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+
+                    <m:Label
+                        text="To"
+                        width="40px"
+                        id="iddate2"
+                        class="sapUiSmallMarginBegin"
+                        labelFor="PostingEndDate"
+                    />
+
+                    <m:DatePicker
+                        id="PostingEndDate"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                    />
+                </m:HBox>
+
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox3"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Project Type"
+                        width="120px"
+                        id="idproject"
+                        labelFor="ProjectType"
+                    />
+
+                    <m:Input
+                        id="ProjectType"
+                        width="40px"
+                        value="Y7"
+                        required="true"
+                    />
+                </m:HBox>
+               <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox10N"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Posting Date to be used for Load"
+                        width="220px"
+                        wrapping="false"
+                        id="iddate11N"
+                        labelFor="PostingActDateN"
+                    />
+
+                    <m:DatePicker
+                        id="PostingActDate"
+                        width="140px"
+                        valueFormat="yyyy-MM-dd"
+                        displayFormat="medium"
+                        required="true"
+                    />
+                </m:HBox>
+                <m:HBox
+                    width="100%"
+                    alignItems="Center"
+                    id="idbhbox4"
+                    justifyContent="Start"
+                    renderType="Bare"
+                    class="sapUiTinyMarginBottom"
+                >
+                    <m:Label
+                        text="Test Run"
+                        visible="false"
+                        id="IDRun"
+                    />
+                    <m:CheckBox
+                        id="testRun"
+                        visible="false"
+                        selected="true"
+                    />
+                </m:HBox>
+
+                <m:Button
+                    text="Review Post Labor"
+                    type="Emphasized"
+                    press=".onLaborLoadReview"
+                    id="IDbtn1"
+                    class="sapUiMediumMarginTop"
+                />
+            </m:VBox>
+        </m:content>
+    </m:Page>
+</mvc:View>

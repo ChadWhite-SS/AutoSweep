@@ -1,0 +1,54 @@
+<mvc:View xmlns:tnt="sap.tnt"
+    controllerName="ns.automatedsweepv4.automatedsweepv4.controller.DCToCIPReview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        title="Review DC-To-CIP Records"
+        id="IDDCToCIPReview"
+    >
+        <content>
+            <Table id="DCToCIPTable" noDataText="No DC-To-CIP Records found!" sticky="ColumnHeaders"
+                growing="true" growingThreshold="50" growingScrollToLoad="true">
+                <columns>
+                    <Column id="idColumn0N1">
+                        <Text
+                            text="WBS Element"
+                            id="idText0N1"
+                        />
+                    </Column>                
+                    <Column id="idColumn1N1">
+                        <Text
+                            text="Cost Element"
+                            id="idText1N1"
+                        />
+                    </Column>
+                    <Column id="idColumn3N1">
+                        <Text
+                            text="Post Date"
+                            id="idText3N1"
+                        />
+                    </Column>
+                    <Column id="idColumn5N1">
+                        <Text
+                            text="Amount"
+                            id="idText5N1"
+                        />
+                    </Column>
+                </columns>
+            </Table>
+        </content>
+
+        <footer>
+            <Toolbar id="idtoolbarN1">
+                <ToolbarSpacer id="idtoolspaceN1" />
+                <Button
+                    id="idButtonN1"
+                    text="Post DC-To_CIP Reclass"
+                    type="Emphasized"
+                    press=".onDCToCIPLoad" 
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
