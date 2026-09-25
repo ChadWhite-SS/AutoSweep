@@ -21,13 +21,13 @@
                     <Title
                         id="dashboardHeaderTitle"
                         text="{i18n>title}"
-                        level="H1" />
+                        level="H1"
+                        class="dashboardHeaderTitle" />
                 </contentLeft>
             </Bar>
         </customHeader>
         <content>
             <VBox id="IDMain" width="100%" class="mainDashboard sapUiResponsiveContentPadding">
-                <Title id="dashboardHeading" text="{i18n>dashboardHeading}" level="H1" class="dashboardHeading" />
                 <Text id="dashboardDescription" text="{i18n>dashboardDescription}" wrapping="true" class="dashboardDescription" />
 
                 <IconTabBar id="reclassificationTabs" expandable="false" selectedKey="operational" class="reclassificationTabs">
