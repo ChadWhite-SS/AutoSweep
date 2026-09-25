@@ -2,100 +2,70 @@
     controllerName="ns.automatedsweepv4.automatedsweepv4.controller.MainView"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m" 
->
+    xmlns="sap.m">
     <Page
-        title="Automated Sweep Dashboard"
-        class="sapUINoMargin sapUINoContentPadding"
-        enableScrolling="false"
         id="IDPage"
-    >
+        title="{i18n>title}"
+        class="mainDashboardPage"
+        enableScrolling="true">
         <content>
-            <VBox
-                class="sapUINoMargin sapUINoContentPadding"
-                id="IDMain"
-                width="100%"
-                height="100%"
-                fitContainer="true"
-                justifyContent="Center"
-                alignItems="Center"
-            >
-                <Button
-                    id="ID1"
-                    width="400px"
-                    text="Labor Load"
-                    type="Emphasized"
-                    press=".onLaborLoad"
-                    class="largeActionButton" 
-                />
-                <Button
-                    id="ID2"
-                    width="400px"
-                    text="Non-Labor Load"
-                    type="Emphasized"
-                    press=".onNonLaborLoad" 
-                    class="largeActionButton"                                
-                />
-                <Button
-                    id="ID4"
-                    width="400px"
-                    text="DC-to-CIP Reclass"
-                    type="Emphasized"
-                    press=".onDCToCIP"
-                    class="largeActionButton"
-                />
-                <Button
-                    id="ID8"
-                    width="400px"
-                    text="Logistics Node Reclass"
-                    type="Emphasized"
-                    press=".onLogisticsNodeReclass"
-                    class="largeActionButton"
-                />
-                <Button
-                    id="ID9"
-                    width="400px"
-                    text="OPEX G&amp;A Reclass"
-                    type="Emphasized"
-                    press=".onOpexGAReclass"
-                    class="largeActionButton"
-                />
-                <Button
-                    id="ID5"
-                    width="400px"
-                    text="CAS-to-AuC Reclass"
-                    type="Emphasized"
-                    press=".onCasToAuc"
-                    tooltip="Requires active balance-sweep backend contract and Finance configuration"
-                    class="largeActionButton"
-                />
-                <Button
-                    id="ID6"
-                    width="400px"
-                    text="CAS-to-expense Reclass"
-                    type="Emphasized"
-                    press=".onCasToExpense"
-                    tooltip="Requires active balance-sweep backend contract and Finance configuration"
-                    class="largeActionButton"
-                />
-                <Button
-                    id="ID10"
-                    width="400px"
-                    text="Employee Contribution Reclass"
-                    type="Emphasized"
-                    press=".onEmployeeContribution"
-                    tooltip="Requires active balance-sweep backend contract and Finance configuration"
-                    class="largeActionButton"
-                />
-                <Button
-                    id="ID7"
-                    width="400px"
-                    text="Interest-to-Investment Reclass"
-                    type="Emphasized"
-                    press=".onInterestToInvestment"
-                    tooltip="Requires active balance-sweep backend contract and Finance configuration"
-                    class="largeActionButton"
-                />
+            <VBox id="IDMain" width="100%" class="mainDashboard sapUiResponsiveContentPadding">
+                <Title id="dashboardHeading" text="{i18n>dashboardHeading}" level="H1" class="dashboardHeading" />
+                <Text id="dashboardDescription" text="{i18n>dashboardDescription}" wrapping="true" class="dashboardDescription" />
+
+                <Panel id="operationalSection" headerText="{i18n>operationalSectionTitle}" class="dashboardSection">
+                    <content>
+                        <FlexBox id="operationalActionGrid" wrap="Wrap" justifyContent="Start" alignItems="Stretch" class="actionGrid">
+                            <VBox id="laborLoadCard" class="actionCard">
+                                <Button id="ID1" width="100%" text="{i18n>laborLoadTitle}" icon="sap-icon://employee" type="Emphasized" press=".onLaborLoad" class="largeActionButton" />
+                                <Text id="laborLoadDescription" text="{i18n>laborLoadDescription}" wrapping="true" class="actionDescription" />
+                            </VBox>
+                            <VBox id="nonLaborLoadCard" class="actionCard">
+                                <Button id="ID2" width="100%" text="{i18n>nonLaborLoadTitle}" icon="sap-icon://activity-items" type="Emphasized" press=".onNonLaborLoad" class="largeActionButton" />
+                                <Text id="nonLaborLoadDescription" text="{i18n>nonLaborLoadDescription}" wrapping="true" class="actionDescription" />
+                            </VBox>
+                            <VBox id="dcToCipCard" class="actionCard">
+                                <Button id="ID4" width="100%" text="{i18n>dcToCipTitle}" icon="sap-icon://move" type="Emphasized" press=".onDCToCIP" class="largeActionButton" />
+                                <Text id="dcToCipDescription" text="{i18n>dcToCipDescription}" wrapping="true" class="actionDescription" />
+                            </VBox>
+                            <VBox id="logisticsNodeReclassCard" class="actionCard">
+                                <Button id="ID8" width="100%" text="{i18n>logisticsNodeReclassTitle}" icon="sap-icon://shipping-status" type="Emphasized" press=".onLogisticsNodeReclass" class="largeActionButton" />
+                                <Text id="logisticsNodeReclassDescription" text="{i18n>logisticsNodeReclassDescription}" wrapping="true" class="actionDescription" />
+                            </VBox>
+                            <VBox id="opexGaReclassCard" class="actionCard">
+                                <Button id="ID9" width="100%" text="{i18n>opexGaReclassTitle}" icon="sap-icon://expense-report" type="Emphasized" press=".onOpexGAReclass" class="largeActionButton" />
+                                <Text id="opexGaReclassDescription" text="{i18n>opexGaReclassDescription}" wrapping="true" class="actionDescription" />
+                            </VBox>
+                        </FlexBox>
+                    </content>
+                </Panel>
+
+                <Panel id="balanceSweepSection" headerText="{i18n>balanceSweepSectionTitle}" class="dashboardSection">
+                    <content>
+                        <FlexBox id="balanceSweepActionGrid" wrap="Wrap" justifyContent="Start" alignItems="Stretch" class="actionGrid">
+                            <VBox id="casToAucCard" class="actionCard">
+                                <Button id="ID5" width="100%" text="{i18n>casToAucTitle}" icon="sap-icon://process" type="Default" press=".onCasToAuc" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
+                                <Text id="casToAucDescription" text="{i18n>casToAucDescription}" wrapping="true" class="actionDescription" />
+                                <ObjectStatus id="casToAucStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" class="actionStatus" />
+                            </VBox>
+                            <VBox id="casToExpenseCard" class="actionCard">
+                                <Button id="ID6" width="100%" text="{i18n>casToExpenseTitle}" icon="sap-icon://money-bills" type="Default" press=".onCasToExpense" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
+                                <Text id="casToExpenseDescription" text="{i18n>casToExpenseDescription}" wrapping="true" class="actionDescription" />
+                                <ObjectStatus id="casToExpenseStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" class="actionStatus" />
+                            </VBox>
+                            <VBox id="employeeContributionCard" class="actionCard">
+                                <Button id="ID10" width="100%" text="{i18n>employeeContributionTitle}" icon="sap-icon://employee" type="Default" press=".onEmployeeContribution" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
+                                <Text id="employeeContributionDescription" text="{i18n>employeeContributionDescription}" wrapping="true" class="actionDescription" />
+                                <ObjectStatus id="employeeContributionStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" class="actionStatus" />
+                            </VBox>
+                            <VBox id="interestToInvestmentCard" class="actionCard">
+                                <Button id="ID7" width="100%" text="{i18n>interestToInvestmentTitle}" icon="sap-icon://money-bills" type="Default" press=".onInterestToInvestment" tooltip="{i18n>balanceSweepTooltip}" class="largeActionButton" />
+                                <Text id="interestToInvestmentDescription" text="{i18n>interestToInvestmentDescription}" wrapping="true" class="actionDescription" />
+                                <ObjectStatus id="interestToInvestmentStatus" text="{i18n>backendRequiredStatus}" state="Information" icon="sap-icon://information" class="actionStatus" />
+                            </VBox>
+                        </FlexBox>
+                    </content>
+                </Panel>
             </VBox>
         </content>
     </Page>
