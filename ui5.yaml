@@ -17,8 +17,8 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /sap
-            destination: SD4
-            sap-client: "300"
+            destination: SD4_200
+            sap-client: "200"
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
