@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata4/sap/zui_automatedsweep_v04/srvd/sap/zui_automatedsweep_v2/0001/",
+        "uri": "/sap/opu/odata4/sap/zui_automatedsweep_v2_o4/srvd/sap/zui_automatedsweep_v2/0001/",
         "type": "OData",
         "settings": {
           "annotations": [],
